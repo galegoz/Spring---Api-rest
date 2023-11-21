@@ -17,4 +17,14 @@ public class Endereco {
     private String complemento;
     private String cidade;
     private String uf;
+
+    public Endereco(endereco.Endereco dados) {
+        this.logradouro = dados.logradouro();
+        this.bairro = dados.bairro();
+        this.cep = dados.cep();
+        this.uf = dados.UF();
+        this.cidade = dados.cidade();
+        this.numero = String.valueOf(dados.numero());
+        this.complemento = dados.complemento();
+    }
 }

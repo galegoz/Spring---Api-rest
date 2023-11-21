@@ -1,7 +1,20 @@
 package endereco;
 
-public record Endereco(String logradouro, int numero, String complemento, String bairro,
-                       String cidade, String UF, String cep) {
+public record Endereco(
+
+        @NotBlank
+                       String logradouro,
+                       @NotBlank
+                       String bairro,
+                       @NotBlank
+                       @Pattern(regexp = "\\d{8}")
+                       String cep,
+                       @NotBlank
+                       String cidade,
+                       @NotBlank
+                       String uf,
+                       String complemento,
+                       String numero) {
 
 
 }
